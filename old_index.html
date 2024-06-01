@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f9f9f9; /* Light gray background */
+            background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,18 +23,18 @@
             padding: 1rem 2rem;
             background: #f9f9f9;
             border-bottom: 1px solid #e0e0e0;
+            width: 100%;
+            max-width: 1200px;
         }
         .header h1 {
             margin: 0;
             font-size: 1.5rem;
-            color: #808080; /* 灰色 */
         }
         nav {
             display: flex;
-            margin-left: 2rem; /* 调整标题与导航栏的间距 */
         }
         nav a {
-            color: #808080; /* 灰色 */
+            color: #006400; /* 深绿色 */
             text-decoration: none;
             margin: 0 1rem;
             font-weight: bold;
@@ -56,22 +56,20 @@
             top: 0;
             height: 100vh;
             overflow-y: auto;
-            text-align: center;
         }
-        .sidebar .profile-pic-container {
-            width: 150px;
-            height: 150px;
+        .sidebar img {
             border-radius: 50%;
-            overflow: hidden; /* Ensures the image is cut to a circle */
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            display: block;
             margin: 0 auto 1rem;
         }
-        .sidebar .profile-pic {
-            width: 150px;
-            height: 150px; /* Increase the height to show more of the top */
-            object-fit: cover;
-            object-position: top; /* Align image to the top to show the hair */
+        .sidebar h1 {
+            text-align: center;
         }
         .contact-info {
+            text-align: center;
             margin-top: 1rem;
         }
         .contact-info p {
@@ -85,7 +83,7 @@
             text-decoration: underline;
         }
         .content {
-            margin-left: 0px;
+            margin-left: 300px;
             padding: 2rem;
             flex: 1;
             background: #fff;
@@ -96,13 +94,12 @@
             margin-bottom: 2rem;
         }
         h2 {
-            color: #808080; /* 灰色 */
-            border-bottom: 2px solid #ADD8E6; /* 浅蓝色边框 */
+            color: #006400; /* 深绿色 */
+            border-bottom: 2px solid #006400; /* 深绿色边框 */
             padding-bottom: 0.5rem;
-            display: inline-block;
         }
         a {
-            color: #ADD8E6; /* 浅蓝色 */
+            color: #006400; /* 深绿色 */
         }
         a:hover {
             text-decoration: underline;
@@ -120,28 +117,23 @@
             margin-bottom: 20px;
         }
         .publication-image {
-            width: 200px;  /* Set your desired width */
-            height: auto;  /* Maintain aspect ratio */
-            margin-right: 20px;  /* Space between image and text */
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
         }
         .publication-text {
             flex: 1;
-        }
-        .icon {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>Yukun Zuo / 左煜昆</h1>
+        <h1>Yukun Zuo / 左右</h1>
         <nav>
             <a href="#about">About Me</a>
             <a href="#education">Education</a>
             <a href="#experience">Work Experience</a>
+            <a href="#research">Research Interests</a>
             <a href="#publications">Publications</a>
             <a href="#awards">Awards</a>
             <a href="#skills">Skills</a>
@@ -149,15 +141,13 @@
     </header>
     <div class="main-container">
         <div class="sidebar">
-            <div class="profile-pic-container">
-                <img src="images/profile-image.jpg" alt="Profile Image" class="profile-pic">
-            </div>
+            <img src="images/profile-image.jpg" alt="Profile Image">
             <h1>Yukun Zuo</h1>
             <p>Post-Doctoral Research Fellow at University of Michigan</p>
             <div class="contact-info">
-                <p><img src="images/pin.png" alt="Location Icon" class="icon"> Ann Arbor, MI, USA</p>
-                <p><img src="images/email.png" alt="Email Icon" class="icon"><a href="mailto:yukunzuo@umich.edu">Email</a></p>
-                <p><img src="images/linkedin.png" alt="LinkedIn Icon" class="icon"><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></p>
+                <p>📍 Ann Arbor, MI, USA</p>
+                <p>✉️ <a href="mailto:yukunzuo@umich.edu">Email</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></p>
             </div>
         </div>
         <div class="content">
@@ -209,81 +199,13 @@
             </section>
             <section id="publications">
                 <h2>Publications</h2>
-                <h3>Published Papers</h3>
-                <ul>
-                    <li class="publication-item">
-                        <img src="images/image3.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Hierarchical Augmentation and Distillation for Class Incremental Audio-Visual Video Recognition</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image4.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Incremental Audio-Visual Fusion for Person Recognition in Earthquake Scene</strong><br>
-                            Sisi You, <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
-                            <em>ACM Transactions on Multimedia Computing, Communications and Applications (TOMM), 2023</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image5.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Dual Structural Knowledge Interaction for Domain Adaptation</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>IEEE Transactions on Multimedia (TMM), 2023</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image6.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Seek Common Ground While Reserving Differences: A Model-Agnostic Module for Noisy Domain Adaptation</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>IEEE Transactions on Multimedia (TMM), 2022</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image7.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Margin-based Adversarial Joint Alignment Domain Adaptation</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2022</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image8.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Attention-Based Multi-Source Domain Adaptation</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
-                            <em>IEEE Transactions on Image Processing (TIP), 2021</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image9.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Category-Level Adversarial Self-Ensembling for Domain Adaptation</strong><br>
-                            <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
-                            <em>IEEE International Conference on Multimedia & Expo (ICME), 2020</em></p>
-                        </div>
-                    </li>
-                    <li class="publication-item">
-                        <img src="images/image10.png" alt="Publication Image" class="publication-image">
-                        <div class="publication-text">
-                            <p><strong>Representation Learning of Knowledge Graphs with Entity Attributes and Multimedia Descriptions</strong><br>
-                            <strong>Yukun Zuo</strong>, Quan Fang, Shengsheng Qian, Xiaorui Zhang, Changsheng Xu<br>
-                            <em>IEEE International Conference on Multimedia Big Data (BigMM), 2018</em></p>
-                        </div>
-                    </li>
-                </ul>
-                <h3>Papers Under Submission</h3>
                 <ul>
                     <li class="publication-item">
                         <img src="images/image1.png" alt="Publication Image" class="publication-image">
                         <div class="publication-text">
                             <p><strong>Hierarchical Prompt for Rehearsal-free Continual Learning</strong><br>
                             <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>In Submission to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</em></p>
+                            <em>In Submission to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</em><br>
                         </div>
                     </li>
                     <li class="publication-item">
@@ -291,7 +213,71 @@
                         <div class="publication-text">
                             <p><strong>Generalized Domain Adaptation with Extremely Limited Labels</strong><br>
                             <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
-                            <em>In Submission to IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024</em></p>
+                            <em>In Submission to IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image3.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Hierarchical Augmentation and Distillation for Class Incremental Audio-Visual Video Recognition</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
+                            <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image4.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Incremental Audio-Visual Fusion for Person Recognition in Earthquake Scene</strong><br>
+                            Sisi You, <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
+                            <em>ACM Transactions on Multimedia Computing, Communications and Applications (TOMM), 2023</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image5.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Dual Structural Knowledge Interaction for Domain Adaptation</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
+                            <em>IEEE Transactions on Multimedia (TMM), 2023</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image6.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Seek Common Ground While Reserving Differences: A Model-Agnostic Module for Noisy Domain Adaptation</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
+                            <em>IEEE Transactions on Multimedia (TMM), 2022</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image7.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Margin-based Adversarial Joint Alignment Domain Adaptation</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Liansheng Zhuang, Changsheng Xu<br>
+                            <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2022</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image8.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Attention-Based Multi-Source Domain Adaptation</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
+                            <em>IEEE Transactions on Image Processing (TIP), 2021</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image9.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Category-Level Adversarial Self-Ensembling for Domain Adaptation</strong><br>
+                            <strong>Yukun Zuo</strong>, Hantao Yao, Changsheng Xu<br>
+                            <em>IEEE International Conference on Multimedia & Expo (ICME), 2020</em><br>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img src="images/image10.png" alt="Publication Image" class="publication-image">
+                        <div class="publication-text">
+                            <p><strong>Representation Learning of Knowledge Graphs with Entity Attributes and Multimedia Descriptions</strong><br>
+                            <strong>Yukun Zuo</strong>, Quan Fang, Shengsheng Qian, Xiaorui Zhang, Changsheng Xu<br>
+                            <em>IEEE International Conference on Multimedia Big Data (BigMM), 2018</em><br>
                         </div>
                     </li>
                 </ul>
